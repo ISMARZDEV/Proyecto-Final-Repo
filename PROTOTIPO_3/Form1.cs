@@ -40,6 +40,7 @@ namespace PROTOTIPO_3
             escucha.RecognizeAsync(RecognizeMode.Multiple);
             serialPort1.Write("Q"); //BUZZER (SONIDO)
             hablar.SpeakAsync($"Reconocimiento de voz iniciado, Hola soy 42 ¿Comó puedo ayudarte?");
+            // Cambio
         }
 
                 private void button2_Click(object sender, EventArgs e)
