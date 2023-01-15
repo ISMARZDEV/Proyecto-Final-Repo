@@ -10,18 +10,19 @@ using System.Windows.Forms;
 using System.Speech.Recognition; //Contiene tipos de tecnología de voz de escritorio de Windows para implementar el reconocimiento de voz.
 using System.Speech.Synthesis; //Contiene clases para inicializar y configurar un motor de síntesis de voz para generar voz.
 using System.IO.Ports; //Contiene clases para controlar puertos serie (Serial Port)
-
+using System.Globalization;
 
 namespace PROTOTIPO_3
 {
+     
     public partial class Form1 : Form
-    {
+    {   
         //SENSOR DE TEMPERATURA
         double temperature = 0, humidity = 0;
         bool updateData = false;
 
         //RECONOCIMIENTO DE VOZ
-        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("es-ES"));
+        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine(new CultureInfo(Cultura()));
 
         //GENERADOR DE VOZ
         SpeechSynthesizer hablar = new SpeechSynthesizer();
@@ -30,7 +31,12 @@ namespace PROTOTIPO_3
         {
             InitializeComponent();
         }
-
+        static string Cultura()
+        {
+            var cultura = CultureInfo.CurrentCulture;
+            string cultura_actual = Convert.ToString(cultura);
+            return cultura_actual;
+        }
         //INICIALIZA EL RECONOCIMIENTO DE VOZ
         private void button1_Click(object sender, EventArgs e)
         {
@@ -43,7 +49,7 @@ namespace PROTOTIPO_3
             // Cambio ismael
         }
 
-                private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             escucha.RecognizeAsyncStop();
         }
@@ -69,7 +75,7 @@ namespace PROTOTIPO_3
 
             /*TEMPERATURA ACTUAL-------------------------------*/
 
-            if (e.Result.Text == "temperatura" || e.Result.Text == "temperatura actual" || e.Result.Text == "cuál es la temperatura" || e.Result.Text == "cuales temperatura" || e.Result.Text == "hace calor" || e.Result.Text == "grados" || e.Result.Text == "hace calor fuera" || e.Result.Text == "calor")
+            if (e.Result.Text == "temperatura" || e.Result.Text == "temperatura actual" || e.Result.Text == "cuál es la temperatura" || e.Result.Text == "Cuales temperatura" || e.Result.Text == "Hace calor" || e.Result.Text == "Grados" || e.Result.Text == "grados" || e.Result.Text == "Hace calor fuera" || e.Result.Text == "calor")
             {
                 hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
             }
@@ -91,7 +97,7 @@ namespace PROTOTIPO_3
 
             }
 
-            if (e.Result.Text == "buenos dias" || e.Result.Text == "buenos días" || e.Result.Text == "buenos vías")
+            if (e.Result.Text == "Buenos dias" || e.Result.Text == "Buenos días" || e.Result.Text == "Buenos vías")
             {
                 hablar.SpeakAsync($"Buenos dias {nombre}, Luces encedidas");
 
@@ -99,14 +105,14 @@ namespace PROTOTIPO_3
 
             /*RELAY 2 LUCES DE FIESTA*/
 
-            if (e.Result.Text == "42 enciende luz de fiesta" || e.Result.Text == "luz de fiesta" || e.Result.Text == "perenne la luzde fiesta")
+            if (e.Result.Text == "42 enciende luz de fiesta" || e.Result.Text == "luz de fiesta")
             {
                 hablar.SpeakAsync($"Listo {nombre}, luz de fiesta encendida");
             }
 
             /*RELAY 1 LUZ NORMAL y RELAY 2 LUCES DE FIESTA*/
 
-            if (e.Result.Text == "42 enciende las luces" || e.Result.Text == "enciende luces" || e.Result.Text == "perenne las luces")
+            if (e.Result.Text == "42 enciende las luces" || e.Result.Text == "enciende luces" || e.Result.Text == "Prende las luces")
             {
                 hablar.SpeakAsync($"Listo {nombre}, luces encendidas");
             }
@@ -115,13 +121,13 @@ namespace PROTOTIPO_3
 
             /*RELAY 1 LUZ NORMAL*/
 
-            if (e.Result.Text == "42 apagar la luz" || e.Result.Text == "apagar la luz" || e.Result.Text == "a pagar la luz" || e.Result.Text == "apagar luces" || e.Result.Text == "a pagar las luces")
+            if (e.Result.Text == "42 apagar la luz" || e.Result.Text == "apagar la luz" || e.Result.Text == "apagar luces" || e.Result.Text == "Apaga las luces")
             {
                 serialPort1.Write("8");
                 hablar.SpeakAsync($"Luz apagada {nombre}");
             }
 
-            if (e.Result.Text == "buenas noches" || e.Result.Text == "descansa 42" || e.Result.Text == "hasta mañana 42")
+            if (e.Result.Text == "Buenas noches" || e.Result.Text == "Buenas noches" || e.Result.Text == "buenas noches")
             {
                 hablar.SpeakAsync($"Luces apagadas, descansa {nombre}");
             }
@@ -149,13 +155,13 @@ namespace PROTOTIPO_3
                 hablar.SpeakAsync($"Led rojo encendido {nombre}");
             }
 
-            if (e.Result.Text == "42 perenne ver" || e.Result.Text == "42 perenne verte" || e.Result.Text == "42 perenne verde" || e.Result.Text == "perenne verde" || e.Result.Text == "perenne ver" || e.Result.Text == "perenne verte" || e.Result.Text == "enciende verde" || e.Result.Text == "enciende verte" || e.Result.Text == "enciende ver")
+            if (e.Result.Text == "42 enciende verde" || e.Result.Text == "enciende verde" || e.Result.Text == "prende verde" || e.Result.Text == "prende luz verde" || e.Result.Text == "enciende luz verde")
             {
                 serialPort1.Write("2");
                 hablar.SpeakAsync($"Led verde encendido {nombre}");
             }
 
-            if (e.Result.Text == "42 enciende azul" || e.Result.Text == "enciende azul" || e.Result.Text == "perenne azul" || e.Result.Text == "perenne luz azul" || e.Result.Text == "enciende luz azul")
+            if (e.Result.Text == "42 enciende azul" || e.Result.Text == "enciende azul" || e.Result.Text == "prende azul" || e.Result.Text == "prende luz azul" || e.Result.Text == "enciende luz azul")
             {
                 serialPort1.Write("3");
                 hablar.SpeakAsync($"Led azul encendido {nombre}");
@@ -183,41 +189,24 @@ namespace PROTOTIPO_3
 
             /*PONE MUSICA ----------------------------------*/
 
-            if (e.Result.Text == "fiesta" || e.Result.Text == "baile" || e.Result.Text == "bailar" || e.Result.Text == "perenne el músico" || e.Result.Text == "enciende la fiestas" || e.Result.Text == "a fiesta")
+            if (e.Result.Text == "fiesta" || e.Result.Text == "baile" || e.Result.Text == "bailar" || e.Result.Text == "Prende el musicon" || e.Result.Text == "Enciende la fiestas" || e.Result.Text == "a fiesta")
             {
                 hablar.SpeakAsync($"Hora de la fiesta {nombre}");
                 string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
                 System.Diagnostics.Process.Start(url);
             }
 
-            if (e.Result.Text == "música tranquila" || e.Result.Text == "música tranquila")
+            if (e.Result.Text == "Musica tranquila" || e.Result.Text == "Musica tranquila")
             {
                 hablar.SpeakAsync($"Escucha estas canciones mientras te relajas {nombre}");
                 string url = "https://www.youtube.com/watch?v=3-4banibETY&list=PL6W2JmY9MGbV1ff53Vd0MHMpMM7aUHRnL&ab_channel=Meltt";
                 System.Diagnostics.Process.Start(url);
             }
-            if (e.Result.Text == "música clásica" || e.Result.Text == "clásicos" || e.Result.Text == "música clásica")
+            if (e.Result.Text == "Musica clasica" || e.Result.Text == "Clasicos" || e.Result.Text == "Música clásica")
             {
                 hablar.SpeakAsync($"Haz escuchado estos temas {nombre}?");
                 string url = "https://www.youtube.com/watch?v=fBJVaJyTMx8&list=PLTW24CNetpwQ-o_Fx5kKKOhGkoYhM0RAJ";
                 System.Diagnostics.Process.Start(url);
-            }
-            
-            /*CONTROL DE VENTANAS ----------------------------------*/
-            /*ANGULO DE VENTANAS ----------------------------------*/
-
-            if (e.Result.Text == "ángulo de ventana" || e.Result.Text == "ángulo de ventana" || e.Result.Text == "Ajustar ventanas" || e.Result.Text == "ajustar de ventana")
-            {
-                hablar.SpeakAsync($"{nombre}, En que angulo desea ajustar las ventanas?");
-                SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine(); // Inicializar el reconocimiento de voz
-                RecognitionResult result = recognizer.Recognize(); // Capturar la entrada de voz del usuario
-
-                string input = result.Text; // Convertir la entrada de voz a texto
-
-                int Palabra;
-                int.TryParse(input, out Palabra);
-
-                hablar.SpeakAsync($"{nombre} Las ventanas se colocaran en un angulo de {Palabra}");
             }
 
         }
@@ -426,7 +415,7 @@ namespace PROTOTIPO_3
 
         }
 
-        private void pictureBox14_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
 
         }
