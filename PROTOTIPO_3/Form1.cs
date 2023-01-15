@@ -203,6 +203,22 @@ namespace PROTOTIPO_3
                 System.Diagnostics.Process.Start(url);
             }
 
+            /*CONTROL DE VENTANAS ----------------------------------*/
+            /*ANGULO DE VENTANAS ----------------------------------*/
+                        
+            if (e.Result.Text == "Angulo de ventana" || e.Result.Text == "angulo de ventana" || e.Result.Text == "Ajustar ventanas" || e.Result.Text == "ajustar de ventana")
+            {
+                hablar.SpeakAsync($"{nombre}, En que angulo desea ajustar las ventanas?");
+                SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine(); // Inicializar el reconocimiento de voz
+                RecognitionResult result = recognizer.Recognize(); // Capturar la entrada de voz del usuario
+
+                string input = result.Text; // Convertir la entrada de voz a texto
+
+                int Palabra;
+                int.TryParse(input, out Palabra);
+
+                hablar.SpeakAsync($"{nombre} Las ventanas se colocaran en un angulo de {Palabra}");
+            }
         }
 
 
@@ -392,6 +408,11 @@ namespace PROTOTIPO_3
             {
                 updateData = false;
             }
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
