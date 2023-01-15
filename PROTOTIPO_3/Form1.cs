@@ -21,7 +21,7 @@ namespace PROTOTIPO_3
         bool updateData = false;
 
         //RECONOCIMIENTO DE VOZ
-        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("es-ES"));
+        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("en-US"));
 
         //GENERADOR DE VOZ
         SpeechSynthesizer hablar = new SpeechSynthesizer();
@@ -203,22 +203,6 @@ namespace PROTOTIPO_3
                 System.Diagnostics.Process.Start(url);
             }
 
-            /*CONTROL DE VENTANAS ----------------------------------*/
-            /*ANGULO DE VENTANAS ----------------------------------*/
-                        
-            if (e.Result.Text == "Angulo de ventana" || e.Result.Text == "angulo de ventana" || e.Result.Text == "Ajustar ventanas" || e.Result.Text == "ajustar de ventana")
-            {
-                hablar.SpeakAsync($"{nombre}, En que angulo desea ajustar las ventanas?");
-                SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine(); // Inicializar el reconocimiento de voz
-                RecognitionResult result = recognizer.Recognize(); // Capturar la entrada de voz del usuario
-
-                string input = result.Text; // Convertir la entrada de voz a texto
-
-                int Palabra;
-                int.TryParse(input, out Palabra);
-
-                hablar.SpeakAsync($"{nombre} Las ventanas se colocaran en un angulo de {Palabra}");
-            }
         }
 
 
@@ -410,7 +394,17 @@ namespace PROTOTIPO_3
             }
         }
 
-        private void pictureBox14_Click(object sender, EventArgs e)
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
