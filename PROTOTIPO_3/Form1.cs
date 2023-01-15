@@ -88,6 +88,13 @@ namespace PROTOTIPO_3
             {
                 serialPort1.Write("7");
                 hablar.SpeakAsync($"Listo {nombre}, luz encendida");
+
+            }
+
+            if (e.Result.Text == "Buenos dias" || e.Result.Text == "Buenos dias ")
+            {
+                hablar.SpeakAsync($"Buenos dias {nombre}, Luces encedidas");
+
             }
 
             /*RELAY 2 LUCES DE FIESTA*/
@@ -114,6 +121,12 @@ namespace PROTOTIPO_3
                 hablar.SpeakAsync($"Luz apagada {nombre}");
             }
 
+            if (e.Result.Text == "Buenas noches" || e.Result.Text == "Buenas noches")
+            {
+                hablar.SpeakAsync($"Luces apagadas, descansa {nombre}");
+            }
+
+
             /*RELAY 2 LUCES DE FIESTA*/
 
             if (e.Result.Text == "42 apaga la luz de fiesta" || e.Result.Text == "apaga la luz de fiesta")
@@ -123,8 +136,8 @@ namespace PROTOTIPO_3
 
             /*RELAY 1 LUZ NORMAL y RELAY 2 LUCES DE FIESTA*/
 
-            if (e.Result.Text == "42 apaga las luces" || e.Result.Text == "apaga luces")
-            {
+            if (e.Result.Text == "42 apaga las luces" || e.Result.Text == "apaga luces" || e.Result.Text == "a pagar luces")
+                    {
                 hablar.SpeakAsync($"Luces apagas {nombre}");
             }
 
@@ -168,12 +181,26 @@ namespace PROTOTIPO_3
                 hablar.SpeakAsync($"Led azul apagado {nombre}");
             }
 
-            if (e.Result.Text == "fiesta" || e.Result.Text == "baile")
+            if (e.Result.Text == "fiesta" || e.Result.Text == "baile" || e.Result.Text == "bailar" || e.Result.Text == "Prende el musicon" || e.Result.Text == "Enciende la fiestas")
             {
                 hablar.SpeakAsync($"Hora de la fiesta {nombre}");
-                string url = "https://www.youtube.com/watch?v=ApXoWvfEYVU&ab_channel=PostMaloneVEVO";
+                string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
                 System.Diagnostics.Process.Start(url);
             }
+
+            if (e.Result.Text == "Musica tranquila" || e.Result.Text == "Musica tranquila")
+            {
+                hablar.SpeakAsync($"Escucha estas canciones mientras te relajas {nombre}");
+                string url = "https://www.youtube.com/watch?v=3-4banibETY&list=PL6W2JmY9MGbV1ff53Vd0MHMpMM7aUHRnL&ab_channel=Meltt";
+                System.Diagnostics.Process.Start(url);
+            }
+            if (e.Result.Text == "Musica clasica" || e.Result.Text == "Musica clasica" || e.Result.Text == "Clasicos")
+            {
+                hablar.SpeakAsync($"Haz escuchado estos temas {nombre}?");
+                string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
+                System.Diagnostics.Process.Start(url);
+            }
+
         }
 
 
