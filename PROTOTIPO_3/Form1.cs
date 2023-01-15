@@ -21,7 +21,7 @@ namespace PROTOTIPO_3
         bool updateData = false;
 
         //RECONOCIMIENTO DE VOZ
-        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine();
+        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("es-ES"));
 
         //GENERADOR DE VOZ
         SpeechSynthesizer hablar = new SpeechSynthesizer();
