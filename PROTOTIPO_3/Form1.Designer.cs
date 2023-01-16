@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -95,6 +95,10 @@
             this.button_open = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -120,7 +124,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.Rectangle_1_White;
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.pictureBox19);
             this.panel2.Controls.Add(this.pictureBox17);
             this.panel2.Controls.Add(this.textBox2);
@@ -176,336 +181,248 @@
             // 
             // pictureBox19
             // 
+            resources.ApplyResources(this.pictureBox19, "pictureBox19");
             this.pictureBox19.BackColor = System.Drawing.Color.White;
             this.pictureBox19.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.DOOR_CLOSE;
-            this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox19.Location = new System.Drawing.Point(435, 76);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(29, 32);
-            this.pictureBox19.TabIndex = 24;
             this.pictureBox19.TabStop = false;
             // 
             // pictureBox17
             // 
+            resources.ApplyResources(this.pictureBox17, "pictureBox17");
             this.pictureBox17.BackColor = System.Drawing.Color.White;
             this.pictureBox17.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.doorOPEN;
-            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox17.Location = new System.Drawing.Point(331, 74);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(29, 32);
-            this.pictureBox17.TabIndex = 24;
             this.pictureBox17.TabStop = false;
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Swis721 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox2.Location = new System.Drawing.Point(274, 49);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 21);
-            this.textBox2.TabIndex = 23;
             // 
             // grado180
             // 
+            resources.ApplyResources(this.grado180, "grado180");
             this.grado180.BackColor = System.Drawing.Color.Blue;
             this.grado180.FlatAppearance.BorderSize = 0;
-            this.grado180.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado180.Location = new System.Drawing.Point(621, 346);
             this.grado180.Name = "grado180";
-            this.grado180.Size = new System.Drawing.Size(12, 51);
-            this.grado180.TabIndex = 22;
             this.grado180.UseVisualStyleBackColor = false;
             this.grado180.Click += new System.EventHandler(this.grado180_Click);
             // 
             // grado170
             // 
+            resources.ApplyResources(this.grado170, "grado170");
             this.grado170.BackColor = System.Drawing.Color.Orange;
             this.grado170.FlatAppearance.BorderSize = 0;
-            this.grado170.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado170.Location = new System.Drawing.Point(603, 347);
             this.grado170.Name = "grado170";
-            this.grado170.Size = new System.Drawing.Size(12, 51);
-            this.grado170.TabIndex = 22;
             this.grado170.UseVisualStyleBackColor = false;
             this.grado170.Click += new System.EventHandler(this.grado170_Click);
             // 
             // grado160
             // 
+            resources.ApplyResources(this.grado160, "grado160");
             this.grado160.BackColor = System.Drawing.Color.Blue;
             this.grado160.FlatAppearance.BorderSize = 0;
-            this.grado160.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado160.Location = new System.Drawing.Point(584, 347);
             this.grado160.Name = "grado160";
-            this.grado160.Size = new System.Drawing.Size(12, 51);
-            this.grado160.TabIndex = 22;
             this.grado160.UseVisualStyleBackColor = false;
             this.grado160.Click += new System.EventHandler(this.grado160_Click);
             // 
             // grado150
             // 
+            resources.ApplyResources(this.grado150, "grado150");
             this.grado150.BackColor = System.Drawing.Color.Orange;
             this.grado150.FlatAppearance.BorderSize = 0;
-            this.grado150.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado150.Location = new System.Drawing.Point(564, 347);
             this.grado150.Name = "grado150";
-            this.grado150.Size = new System.Drawing.Size(12, 51);
-            this.grado150.TabIndex = 22;
             this.grado150.UseVisualStyleBackColor = false;
             this.grado150.Click += new System.EventHandler(this.grado150_Click);
             // 
             // grado140
             // 
+            resources.ApplyResources(this.grado140, "grado140");
             this.grado140.BackColor = System.Drawing.Color.Blue;
             this.grado140.FlatAppearance.BorderSize = 0;
-            this.grado140.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado140.Location = new System.Drawing.Point(545, 347);
             this.grado140.Name = "grado140";
-            this.grado140.Size = new System.Drawing.Size(12, 51);
-            this.grado140.TabIndex = 22;
             this.grado140.UseVisualStyleBackColor = false;
             this.grado140.Click += new System.EventHandler(this.grado140_Click);
             // 
             // grado130
             // 
+            resources.ApplyResources(this.grado130, "grado130");
             this.grado130.BackColor = System.Drawing.Color.Orange;
             this.grado130.FlatAppearance.BorderSize = 0;
-            this.grado130.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado130.Location = new System.Drawing.Point(526, 347);
             this.grado130.Name = "grado130";
-            this.grado130.Size = new System.Drawing.Size(12, 51);
-            this.grado130.TabIndex = 22;
             this.grado130.UseVisualStyleBackColor = false;
             this.grado130.Click += new System.EventHandler(this.grado130_Click);
             // 
             // grado120
             // 
+            resources.ApplyResources(this.grado120, "grado120");
             this.grado120.BackColor = System.Drawing.Color.Blue;
             this.grado120.FlatAppearance.BorderSize = 0;
-            this.grado120.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado120.Location = new System.Drawing.Point(507, 347);
             this.grado120.Name = "grado120";
-            this.grado120.Size = new System.Drawing.Size(12, 51);
-            this.grado120.TabIndex = 22;
             this.grado120.UseVisualStyleBackColor = false;
             this.grado120.Click += new System.EventHandler(this.grado120_Click);
             // 
             // grado110
             // 
+            resources.ApplyResources(this.grado110, "grado110");
             this.grado110.BackColor = System.Drawing.Color.Orange;
             this.grado110.FlatAppearance.BorderSize = 0;
-            this.grado110.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado110.Location = new System.Drawing.Point(488, 347);
             this.grado110.Name = "grado110";
-            this.grado110.Size = new System.Drawing.Size(12, 51);
-            this.grado110.TabIndex = 22;
             this.grado110.UseVisualStyleBackColor = false;
             this.grado110.Click += new System.EventHandler(this.grado110_Click);
             // 
             // grado100
             // 
+            resources.ApplyResources(this.grado100, "grado100");
             this.grado100.BackColor = System.Drawing.Color.Blue;
             this.grado100.FlatAppearance.BorderSize = 0;
-            this.grado100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado100.Location = new System.Drawing.Point(469, 346);
             this.grado100.Name = "grado100";
-            this.grado100.Size = new System.Drawing.Size(12, 51);
-            this.grado100.TabIndex = 22;
             this.grado100.UseVisualStyleBackColor = false;
             this.grado100.Click += new System.EventHandler(this.grado100_Click);
             // 
             // grado90
             // 
+            resources.ApplyResources(this.grado90, "grado90");
             this.grado90.BackColor = System.Drawing.Color.Orange;
             this.grado90.FlatAppearance.BorderSize = 0;
-            this.grado90.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado90.Location = new System.Drawing.Point(451, 347);
             this.grado90.Name = "grado90";
-            this.grado90.Size = new System.Drawing.Size(12, 51);
-            this.grado90.TabIndex = 22;
             this.grado90.UseVisualStyleBackColor = false;
             this.grado90.Click += new System.EventHandler(this.grado90_Click);
             // 
             // grado80
             // 
+            resources.ApplyResources(this.grado80, "grado80");
             this.grado80.BackColor = System.Drawing.Color.Blue;
             this.grado80.FlatAppearance.BorderSize = 0;
-            this.grado80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado80.Location = new System.Drawing.Point(431, 346);
             this.grado80.Name = "grado80";
-            this.grado80.Size = new System.Drawing.Size(12, 51);
-            this.grado80.TabIndex = 22;
             this.grado80.UseVisualStyleBackColor = false;
             this.grado80.Click += new System.EventHandler(this.grado80_Click);
             // 
             // grado70
             // 
+            resources.ApplyResources(this.grado70, "grado70");
             this.grado70.BackColor = System.Drawing.Color.Orange;
             this.grado70.FlatAppearance.BorderSize = 0;
-            this.grado70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado70.Location = new System.Drawing.Point(412, 347);
             this.grado70.Name = "grado70";
-            this.grado70.Size = new System.Drawing.Size(12, 51);
-            this.grado70.TabIndex = 22;
             this.grado70.UseVisualStyleBackColor = false;
             this.grado70.Click += new System.EventHandler(this.grado70_Click);
             // 
             // grado60
             // 
+            resources.ApplyResources(this.grado60, "grado60");
             this.grado60.BackColor = System.Drawing.Color.Blue;
             this.grado60.FlatAppearance.BorderSize = 0;
-            this.grado60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado60.Location = new System.Drawing.Point(393, 347);
             this.grado60.Name = "grado60";
-            this.grado60.Size = new System.Drawing.Size(12, 51);
-            this.grado60.TabIndex = 22;
             this.grado60.UseVisualStyleBackColor = false;
             this.grado60.Click += new System.EventHandler(this.grado60_Click);
             // 
             // grado50
             // 
+            resources.ApplyResources(this.grado50, "grado50");
             this.grado50.BackColor = System.Drawing.Color.Orange;
             this.grado50.FlatAppearance.BorderSize = 0;
-            this.grado50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado50.Location = new System.Drawing.Point(374, 347);
             this.grado50.Name = "grado50";
-            this.grado50.Size = new System.Drawing.Size(12, 51);
-            this.grado50.TabIndex = 22;
             this.grado50.UseVisualStyleBackColor = false;
             this.grado50.Click += new System.EventHandler(this.grado50_Click);
             // 
             // grado40
             // 
+            resources.ApplyResources(this.grado40, "grado40");
             this.grado40.BackColor = System.Drawing.Color.Blue;
             this.grado40.FlatAppearance.BorderSize = 0;
-            this.grado40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado40.Location = new System.Drawing.Point(355, 347);
             this.grado40.Name = "grado40";
-            this.grado40.Size = new System.Drawing.Size(12, 51);
-            this.grado40.TabIndex = 22;
             this.grado40.UseVisualStyleBackColor = false;
             this.grado40.Click += new System.EventHandler(this.grado40_Click);
             // 
             // grado30
             // 
+            resources.ApplyResources(this.grado30, "grado30");
             this.grado30.BackColor = System.Drawing.Color.Orange;
             this.grado30.FlatAppearance.BorderSize = 0;
-            this.grado30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado30.Location = new System.Drawing.Point(337, 347);
             this.grado30.Name = "grado30";
-            this.grado30.Size = new System.Drawing.Size(12, 51);
-            this.grado30.TabIndex = 22;
             this.grado30.UseVisualStyleBackColor = false;
             this.grado30.Click += new System.EventHandler(this.grado30_Click);
             // 
             // grado20
             // 
+            resources.ApplyResources(this.grado20, "grado20");
             this.grado20.BackColor = System.Drawing.Color.Blue;
             this.grado20.FlatAppearance.BorderSize = 0;
-            this.grado20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado20.Location = new System.Drawing.Point(318, 347);
             this.grado20.Name = "grado20";
-            this.grado20.Size = new System.Drawing.Size(12, 51);
-            this.grado20.TabIndex = 22;
             this.grado20.UseVisualStyleBackColor = false;
             this.grado20.Click += new System.EventHandler(this.grado20_Click);
             // 
             // grado10
             // 
+            resources.ApplyResources(this.grado10, "grado10");
             this.grado10.BackColor = System.Drawing.Color.Orange;
             this.grado10.FlatAppearance.BorderSize = 0;
-            this.grado10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado10.Location = new System.Drawing.Point(299, 347);
             this.grado10.Name = "grado10";
-            this.grado10.Size = new System.Drawing.Size(12, 51);
-            this.grado10.TabIndex = 22;
             this.grado10.UseVisualStyleBackColor = false;
             this.grado10.Click += new System.EventHandler(this.grado10_Click);
             // 
             // grado0
             // 
+            resources.ApplyResources(this.grado0, "grado0");
             this.grado0.BackColor = System.Drawing.Color.Blue;
             this.grado0.FlatAppearance.BorderSize = 0;
-            this.grado0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grado0.Location = new System.Drawing.Point(281, 347);
             this.grado0.Name = "grado0";
-            this.grado0.Size = new System.Drawing.Size(12, 51);
-            this.grado0.TabIndex = 22;
             this.grado0.UseVisualStyleBackColor = false;
             this.grado0.Click += new System.EventHandler(this.grado0_Click);
             // 
             // pictureBox11
             // 
+            resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.BackColor = System.Drawing.Color.White;
             this.pictureBox11.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.servo;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(282, 333);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(362, 79);
-            this.pictureBox11.TabIndex = 21;
             this.pictureBox11.TabStop = false;
             // 
             // pictureBox18
             // 
+            resources.ApplyResources(this.pictureBox18, "pictureBox18");
             this.pictureBox18.BackColor = System.Drawing.Color.White;
             this.pictureBox18.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.zona_segura;
-            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox18.Location = new System.Drawing.Point(101, 211);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(144, 65);
-            this.pictureBox18.TabIndex = 20;
             this.pictureBox18.TabStop = false;
             // 
             // button16
             // 
+            resources.ApplyResources(this.button16, "button16");
             this.button16.BackColor = System.Drawing.Color.White;
             this.button16.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.CLOSE;
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Location = new System.Drawing.Point(373, 79);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(57, 23);
-            this.button16.TabIndex = 17;
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button13
             // 
+            resources.ApplyResources(this.button13, "button13");
             this.button13.BackColor = System.Drawing.Color.White;
             this.button13.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.DESACTIVA;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Location = new System.Drawing.Point(82, 156);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(80, 22);
-            this.button13.TabIndex = 17;
             this.button13.UseVisualStyleBackColor = false;
             // 
             // button12
             // 
+            resources.ApplyResources(this.button12, "button12");
             this.button12.BackColor = System.Drawing.Color.White;
             this.button12.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.ACTIVAR;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(19, 157);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(59, 20);
-            this.button12.TabIndex = 17;
             this.button12.UseVisualStyleBackColor = false;
             // 
             // button15
             // 
+            resources.ApplyResources(this.button15, "button15");
             this.button15.BackColor = System.Drawing.Color.White;
             this.button15.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.OPEN;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(271, 80);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(57, 23);
-            this.button15.TabIndex = 17;
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
@@ -514,11 +431,7 @@
             resources.ApplyResources(this.pictureBox16, "pictureBox16");
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.pictureBox16.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.alarma_contra_intrusos;
-            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox16.Location = new System.Drawing.Point(12, 138);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(252, 47);
-            this.pictureBox16.TabIndex = 16;
             this.pictureBox16.TabStop = false;
             // 
             // pictureBox15
@@ -526,11 +439,7 @@
             resources.ApplyResources(this.pictureBox15, "pictureBox15");
             this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.pictureBox15.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.Group_22;
-            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox15.Location = new System.Drawing.Point(260, 11);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(385, 116);
-            this.pictureBox15.TabIndex = 14;
             this.pictureBox15.TabStop = false;
             // 
             // pictureBox12
@@ -567,30 +476,27 @@
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.AutoFitMinFontSize = 6;
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(337, 158);
-            this.chart1.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.chart1, "chart1");
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.AutoFitMinFontSize = 6;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Name = "chart1";
-            series9.BorderWidth = 2;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Color = System.Drawing.Color.Blue;
-            series9.Legend = "Legend1";
-            series9.Name = "HUM";
-            series10.BorderWidth = 2;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series10.Legend = "Legend1";
-            series10.Name = "TEMP";
-            this.chart1.Series.Add(series9);
-            this.chart1.Series.Add(series10);
-            this.chart1.Size = new System.Drawing.Size(287, 127);
-            this.chart1.TabIndex = 11;
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Color = System.Drawing.Color.Blue;
+            series3.Legend = "Legend1";
+            series3.Name = "HUM";
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series4.Legend = "Legend1";
+            series4.Name = "TEMP";
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
             // 
             // button6
             // 
@@ -745,11 +651,7 @@
             resources.ApplyResources(this.pictureBox14, "pictureBox14");
             this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
             this.pictureBox14.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.alarma_contra_incendios;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(12, 194);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(253, 91);
-            this.pictureBox14.TabIndex = 6;
             this.pictureBox14.TabStop = false;
             // 
             // pictureBox8
@@ -800,7 +702,6 @@
             this.comboBox_portList.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.comboBox_portList.FormattingEnabled = true;
             this.comboBox_portList.Name = "comboBox_portList";
-            this.comboBox_portList.DropDown += new System.EventHandler(this.comboBox_portList_DropDown);
             // 
             // pictureBox4
             // 
@@ -841,14 +742,43 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(45)))), ((int)(((byte)(82)))));
-            this.panel1.Controls.Add(this.comboBox_baudRated);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.button_open);
-            this.panel1.Controls.Add(this.comboBox_portList);
-            this.panel1.Controls.Add(this.button_close);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.panel1.Controls.Add(this.button11);
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBox1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.ACTUALIZAR;
+            resources.ApplyResources(this.button11, "button11");
+            this.button11.Name = "button11";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.CONECTAR;
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // comboBox2
+            // 
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Name = "comboBox2";
+            // 
+            // comboBox1
+            // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Name = "comboBox1";
             // 
             // Form1
             // 
@@ -948,6 +878,11 @@
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

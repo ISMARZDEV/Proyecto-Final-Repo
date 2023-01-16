@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Principal));
             this.PanelIzquierdo = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.PanelFormularioHijo = new System.Windows.Forms.Panel();
@@ -48,24 +48,8 @@
             this.PanelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.PanelIzquierdo.Name = "PanelIzquierdo";
-            this.PanelIzquierdo.Size = new System.Drawing.Size(200, 570);
+            this.PanelIzquierdo.Size = new System.Drawing.Size(200, 591);
             this.PanelIzquierdo.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(74)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(80)))), ((int)(((byte)(112)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(80)))), ((int)(((byte)(112)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(2, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 99);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Funcionalidades";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -76,8 +60,24 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 570);
+            this.panel1.Size = new System.Drawing.Size(200, 633);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(74)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(80)))), ((int)(((byte)(112)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(80)))), ((int)(((byte)(112)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(3, 305);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 99);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Funcionalidades";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox5
             // 
@@ -85,7 +85,7 @@
             this.pictureBox5.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.logo_intec_1;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 463);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 496);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(172, 85);
             this.pictureBox5.TabIndex = 3;
@@ -96,9 +96,9 @@
             this.pictureBox3.BackgroundImage = global::PROTOTIPO_3.Properties.Resources.Perfil;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(10, 48);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(161, 147);
+            this.pictureBox3.Size = new System.Drawing.Size(182, 157);
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
@@ -109,14 +109,14 @@
             this.PanelFormularioHijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormularioHijo.Location = new System.Drawing.Point(200, 0);
             this.PanelFormularioHijo.Name = "PanelFormularioHijo";
-            this.PanelFormularioHijo.Size = new System.Drawing.Size(698, 570);
+            this.PanelFormularioHijo.Size = new System.Drawing.Size(703, 591);
             this.PanelFormularioHijo.TabIndex = 1;
             // 
             // Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 570);
+            this.ClientSize = new System.Drawing.Size(903, 591);
             this.Controls.Add(this.PanelFormularioHijo);
             this.Controls.Add(this.PanelIzquierdo);
             this.Cursor = System.Windows.Forms.Cursors.Default;
