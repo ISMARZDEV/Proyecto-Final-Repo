@@ -124,6 +124,9 @@
   <data name="Incendio1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Incendio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="alarma contra incendios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\alarma contra incendios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tarjeta_de_acceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\tarjeta-de-acceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,6 +135,12 @@
   </data>
   <data name="CONECTAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\CONECTAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ACTIVAR INTRUSOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ACTIVAR INTRUSOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PUERTA 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\PUERTA 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="INICIAR ASISTENTE DE VOZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\INICIAR ASISTENTE DE VOZ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +157,17 @@
   <data name="Luces 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Luces 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doorOPEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doorOPEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alarma contra intrusos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarma contra intrusos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="puertaacceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\puertaacceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Rectangle_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Rectangle 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Voz1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Voz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Voz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Voz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -162,6 +177,9 @@
   </data>
   <data name="AZUL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\AZUL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AMARILLO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\AMARILLO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\caliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,20 +193,26 @@
   <data name="VENTANA C1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\VENTANA C1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="zona segura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zona segura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo_intec_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\logo-intec 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DETENERE ASISTENTE DE VOZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\DETENERE ASISTENTE DE VOZ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OPEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\OPEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ALARMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\ALARMA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ACTIVAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ACTIVAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AMARILLO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\AMARILLO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Group 22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Group 22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="acceso2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\acceso2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DASHBOARD___PROTOTIPO_V0_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\DASHBOARD _ PROTOTIPO V0.1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,22 +220,37 @@
   <data name="Incendio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Incendio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SERVOMOTOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\SERVOMOTOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CLOSE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\CLOSE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="servo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\servo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DESACTIVA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DESACTIVA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Configuración de puertos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Configuración de puertos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ALARMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ALARMA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectangle_1_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Rectangle 1 White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OPEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\OPEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ROJO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\ROJO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PUERTA 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\PUERTA 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Voz1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Voz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Configuración de puertos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Configuración de puertos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DOOR CLOSE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DOOR CLOSE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

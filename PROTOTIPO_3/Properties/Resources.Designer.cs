@@ -63,6 +63,36 @@ namespace PROTOTIPO_3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap acceso2 {
+            get {
+                object obj = ResourceManager.GetObject("acceso2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ACTIVAR {
+            get {
+                object obj = ResourceManager.GetObject("ACTIVAR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ACTIVAR_INTRUSOS {
+            get {
+                object obj = ResourceManager.GetObject("ACTIVAR INTRUSOS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ACTUALIZAR {
             get {
                 object obj = ResourceManager.GetObject("ACTUALIZAR", resourceCulture);
@@ -76,6 +106,26 @@ namespace PROTOTIPO_3.Properties {
         internal static System.Drawing.Bitmap ALARMA {
             get {
                 object obj = ResourceManager.GetObject("ALARMA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alarma_contra_incendios {
+            get {
+                object obj = ResourceManager.GetObject("alarma contra incendios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alarma_contra_intrusos {
+            get {
+                object obj = ResourceManager.GetObject("alarma contra intrusos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +213,16 @@ namespace PROTOTIPO_3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DESACTIVA {
+            get {
+                object obj = ResourceManager.GetObject("DESACTIVA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DETENERE_ASISTENTE_DE_VOZ {
             get {
                 object obj = ResourceManager.GetObject("DETENERE ASISTENTE DE VOZ", resourceCulture);
@@ -173,9 +233,39 @@ namespace PROTOTIPO_3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DOOR_CLOSE {
+            get {
+                object obj = ResourceManager.GetObject("DOOR CLOSE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doorOPEN {
+            get {
+                object obj = ResourceManager.GetObject("doorOPEN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GRADOS {
             get {
                 object obj = ResourceManager.GetObject("GRADOS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_22 {
+            get {
+                object obj = ResourceManager.GetObject("Group 22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +393,16 @@ namespace PROTOTIPO_3.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap puertaacceso {
+            get {
+                object obj = ResourceManager.GetObject("puertaacceso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rectangle_1_White {
             get {
                 object obj = ResourceManager.GetObject("Rectangle_1_White", resourceCulture);
@@ -326,6 +426,26 @@ namespace PROTOTIPO_3.Properties {
         internal static System.Drawing.Bitmap ROJO {
             get {
                 object obj = ResourceManager.GetObject("ROJO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap servo {
+            get {
+                object obj = ResourceManager.GetObject("servo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SERVOMOTOR {
+            get {
+                object obj = ResourceManager.GetObject("SERVOMOTOR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +496,16 @@ namespace PROTOTIPO_3.Properties {
         internal static System.Drawing.Bitmap Voz1 {
             get {
                 object obj = ResourceManager.GetObject("Voz1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zona_segura {
+            get {
+                object obj = ResourceManager.GetObject("zona segura", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

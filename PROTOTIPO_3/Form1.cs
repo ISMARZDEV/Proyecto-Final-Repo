@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Speech.Recognition; //Contiene tipos de tecnología de voz de escritorio de Windows para implementar el reconocimiento de voz.
 using System.Speech.Synthesis; //Contiene clases para inicializar y configurar un motor de síntesis de voz para generar voz.
 using System.IO.Ports; //Contiene clases para controlar puertos serie (Serial Port)
+using System.Windows.Forms.DataVisualization.Charting;
 
 
 namespace PROTOTIPO_3
@@ -114,47 +115,52 @@ namespace PROTOTIPO_3
                 }
             }
 
-            //TEMPERATURA ACTUAL-------------------------------*/
-            foreach (string s in TemperaturaIA)
+            if (e.Result.Text == "quien es la mas hermosa" || e.Result.Text == "la más hermosa")
             {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
-                    break;
-                }
+                hablar.SpeakAsync($"Karla es la mas hermosa del mundo");
+            }
+
+
+
+
+            /*TEMPERATURA ACTUAL-------------------------------*/
+
+            if (e.Result.Text == "temperatura" || e.Result.Text == "temperatura actual")
+            {
+                serialPort1.Write("Z");
+                hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
+                serialPort1.Write("X");
             }
             /*HUMEDAD ACTUAL-----------------------------------*/
 
-            foreach (string s in HumedadIA)
+            if (e.Result.Text == "humedad" || e.Result.Text == "humedad actual")
             {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
-                    break;
-                }
+                hablar.SpeakAsync($"El porcentaje actual de humedad es de {humidity}");
+                serialPort1.Write("L");
             }
 
             /*ENCENDER LUCES ----------------------------------*/
 
             /*RELAY 1 LUZ NORMAL*/
-            foreach (string s in LuzIA)
+
+            if (e.Result.Text == "42 enciende la luz" || e.Result.Text == "enciende la luz")
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("7");
-                    hablar.SpeakAsync($"Listo {nombre}, luz encendida");
-                    break;
-                }
+                serialPort1.Write("7");
+                hablar.SpeakAsync($"Listo {nombre}, luz encendida");
+
+            }
+
+            if (e.Result.Text == "Buenos dias" || e.Result.Text == "Buenos dias ")
+            {
+                hablar.SpeakAsync($"Buenos dias {nombre}, Luces encedidas");
+
             }
 
             /*RELAY 2 LUCES DE FIESTA*/
-            foreach (string s in FiestaIA)
+
+            if (e.Result.Text == "42 enciende luz de fiesta" || e.Result.Text == "luz de fiesta")
             {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"Listo {nombre}, luz de fiesta encendida");
-                    break;
-                }
+                hablar.SpeakAsync($"Listo {nombre}, luz de fiesta encendida");
             }
 
             /*RELAY 1 LUZ NORMAL y RELAY 2 LUCES DE FIESTA*/
@@ -172,152 +178,91 @@ namespace PROTOTIPO_3
             /*RELAY 1 LUZ NORMAL*/
             foreach (string s in ApagarLucesIA)
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("8");
-                    hablar.SpeakAsync($"Luz apagada {nombre}");
-                    break;
-                }
-            }
-            foreach (string s in BuenasNochesIA)
-            {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"Luces apagadas, descansa {nombre}");
-                    break;
-                }
+                serialPort1.Write("8");
+                hablar.SpeakAsync($"Luz apagada {nombre}");
             }
 
-            /*RELAY 2 LUCES DE FIESTA*/
-            foreach (string s in ApagarLucesFiestaIA)
+            if (e.Result.Text == "Buenas noches" || e.Result.Text == "Buenas noches")
             {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"Luz de fiesta apagada {nombre}");
-                    break;
-                }
+                hablar.SpeakAsync($"Luces apagadas, descansa {nombre}");
+            }
+
+
+            /*RELAY 2 LUCES DE FIESTA*/
+
+            if (e.Result.Text == "42 apaga la luz de fiesta" || e.Result.Text == "apaga la luz de fiesta")
+            {
+                hablar.SpeakAsync($"Luz de fiesta apagada {nombre}");
             }
 
             /*RELAY 1 LUZ NORMAL y RELAY 2 LUCES DE FIESTA*/
+
+            if (e.Result.Text == "42 apaga las luces" || e.Result.Text == "apaga luces" || e.Result.Text == "a pagar luces")
+                    {
+                hablar.SpeakAsync($"Luces apagas {nombre}");
+            }
 
             /*ENCENDER LEDS ----------------------------------*/
 
 
             foreach (string s in EncenderRojoIA)
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("1");
-                    hablar.SpeakAsync($"Led rojo encendido {nombre}");
-                    break;
-                }
+                serialPort1.Write("1");
+                hablar.SpeakAsync($"Led rojo encendido {nombre}");
             }
 
             foreach (string s in EncenderVerdeIA)
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("2");
-                    hablar.SpeakAsync($"Led verde encendido {nombre}");
-                    break;
-                }
+                serialPort1.Write("2");
+                hablar.SpeakAsync($"Led verde encendido {nombre}");
             }
 
             foreach (string s in EncenderAzulIA)
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("3");
-                    hablar.SpeakAsync($"Led azul encendido {nombre}");
-                    break;
-                }
+                serialPort1.Write("3");
+                hablar.SpeakAsync($"Led azul encendido {nombre}");
             }
 
             /*APAGAR LEDS ----------------------------------*/
 
             foreach (string s in ApagarRojoIA)
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("4");
-                    hablar.SpeakAsync($"Led rojo apagado {nombre}");
-                    break;
-                }
+                serialPort1.Write("4");
+                hablar.SpeakAsync($"Led rojo apagado {nombre}");
             }
 
             foreach (string s in ApagarVerdeIA)
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("5");
-                    hablar.SpeakAsync($"Led verde apagado {nombre}");
-                    break;
-                }
+                serialPort1.Write("5");
+                hablar.SpeakAsync($"Led verde apagado {nombre}");
             }
 
-            foreach (string s in ApagarAzulIA)
+            if (e.Result.Text == "42 apagar azul" || e.Result.Text == "apagar azul" || e.Result.Text == "a pagar azul")
             {
-                if (e.Result.Text == s)
-                {
-                    serialPort1.Write("6");
-                    hablar.SpeakAsync($"Led azul apagado {nombre}");
-                    break;
-                }
+                serialPort1.Write("6");
+                hablar.SpeakAsync($"Led azul apagado {nombre}");
             }
 
-            /*PONE MUSICA ----------------------------------*/
-
-
-            foreach (string s in HoraFiestaIA)
+            if (e.Result.Text == "fiesta" || e.Result.Text == "baile" || e.Result.Text == "bailar" || e.Result.Text == "Prende el musicon" || e.Result.Text == "Enciende la fiestas")
             {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"Hora de la fiesta {nombre}");
-                    string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
-                    System.Diagnostics.Process.Start(url);
-                    break;
-                }
+                hablar.SpeakAsync($"Hora de la fiesta {nombre}");
+                string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
+                System.Diagnostics.Process.Start(url);
             }
-            foreach (string s in MusicaTranquilaIA)
+
+            if (e.Result.Text == "Musica tranquila" || e.Result.Text == "Musica tranquila")
             {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"Escucha estas canciones mientras te relajas {nombre}");
-                    string url = "https://www.youtube.com/watch?v=3-4banibETY&list=PL6W2JmY9MGbV1ff53Vd0MHMpMM7aUHRnL&ab_channel=Meltt";
-                    System.Diagnostics.Process.Start(url);
-                    break;
-                }
+                hablar.SpeakAsync($"Escucha estas canciones mientras te relajas {nombre}");
+                string url = "https://www.youtube.com/watch?v=3-4banibETY&list=PL6W2JmY9MGbV1ff53Vd0MHMpMM7aUHRnL&ab_channel=Meltt";
+                System.Diagnostics.Process.Start(url);
             }
-            foreach (string s in MusicaClasicaIA)
+            if (e.Result.Text == "Musica clasica" || e.Result.Text == "Musica clasica" || e.Result.Text == "Clasicos")
             {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"Haz escuchado estos temas {nombre}?");
-                    string url = "https://www.youtube.com/watch?v=fBJVaJyTMx8&list=PLTW24CNetpwQ-o_Fx5kKKOhGkoYhM0RAJ";
-                    System.Diagnostics.Process.Start(url);
-                    break;
-                }
+                hablar.SpeakAsync($"Haz escuchado estos temas {nombre}?");
+                string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
+                System.Diagnostics.Process.Start(url);
             }
 
-            /*CONTROL DE VENTANAS ----------------------------------*/
-            /*ANGULO DE VENTANAS ----------------------------------*/
-            foreach (string s in ControlVentanaIA)
-            {
-                if (e.Result.Text == s)
-                {
-                    hablar.SpeakAsync($"{nombre}, En que angulo desea ajustar las ventanas?");
-                    SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine(); // Inicializar el reconocimiento de voz
-                    RecognitionResult result = recognizer.Recognize(); // Capturar la entrada de voz del usuario
-
-                    string input = result.Text; // Convertir la entrada de voz a texto
-
-                    int Palabra;
-                    int.TryParse(input, out Palabra);
-
-                    hablar.SpeakAsync($"{nombre} Las ventanas se colocaran en un angulo de {Palabra}");
-                    break;
-                }
-            }
         }
 
         //CONTROL DE DISPOSITIVOS EN EN LA GUI (Botones...)
@@ -328,7 +273,7 @@ namespace PROTOTIPO_3
             if (botonPresionado)
             {
                 // Segunda función
-                serialPort1.Write("1");
+                serialPort1.Write("Z");
                 hablar.SpeakAsync($"Led rojo encendido");
                 // Cambiamos el estado del botón para la próxima vez que sea presionado
                 botonPresionado = false;
@@ -336,7 +281,7 @@ namespace PROTOTIPO_3
             else
             {
                 // Primera función
-                serialPort1.Write("4");
+                serialPort1.Write("X");
                 // Cambiamos el estado del botón para la próxima vez que sea presionado
                 botonPresionado = true;
             }
@@ -349,7 +294,7 @@ namespace PROTOTIPO_3
             if (botonPresionado)
             {
                 // Segunda función
-                serialPort1.Write("2");
+                serialPort1.Write("B");
                 hablar.SpeakAsync($"Led verde encendido");
                 // Cambiamos el estado del botón para la próxima vez que sea presionado
                 botonPresionado = false;
@@ -357,7 +302,7 @@ namespace PROTOTIPO_3
             else
             {
                 // Primera función
-                serialPort1.Write("5");
+                serialPort1.Write("N");
                 // Cambiamos el estado del botón para la próxima vez que sea presionado
                 botonPresionado = true;
             }
@@ -370,7 +315,7 @@ namespace PROTOTIPO_3
             if (botonPresionado)
             {
                 // Segunda función
-                serialPort1.Write("3");
+                serialPort1.Write("K");
                 hablar.SpeakAsync($"Led azul encendido");
                 // Cambiamos el estado del botón para la próxima vez que sea presionado
                 botonPresionado = false;
@@ -378,7 +323,7 @@ namespace PROTOTIPO_3
             else
             {
                 // Primera función
-                serialPort1.Write("6");
+                serialPort1.Write("L");
                 // Cambiamos el estado del botón para la próxima vez que sea presionado
                 botonPresionado = true;
             }
@@ -392,7 +337,7 @@ namespace PROTOTIPO_3
             //SE DEFINEN LAS 
             chart1.Series["TEMP"].Points.AddXY(1, 1);
             chart1.Series["HUM"].Points.AddXY(1, 1);
-          
+
         }
         //OBTIENE LOS PUERTOS DISPONIBLES DEL CUADRO COMBINADO Y POSTERIORMENTE LOS MUESTRA EN EL COMBOBOX
         private void comboBox_portList_DropDown(object sender, EventArgs e)
@@ -469,8 +414,18 @@ namespace PROTOTIPO_3
         private void Show_data(object sender, EventArgs e)
         {
             if (updateData == true)
-            {   
+            {
+                if (temperature >= 35 && temperature <= 50)
+                {
+                    serialPort1.Write("Z");
+                    serialPort1.Write("Q");
+                }
 
+                if (temperature >= 0 && temperature <= 34)
+                {
+                    serialPort1.Write("X");
+                }
+                
                 label_temperature.Text = string.Format("{0}°C", temperature.ToString());
                 label_humidity.Text = string.Format("{0}%", humidity.ToString());
 
@@ -509,6 +464,176 @@ namespace PROTOTIPO_3
             {
                 updateData = false;
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("S");
+            hablar.SpeakAsync($"Luz encendida");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("R");
+            hablar.SpeakAsync($"Luz apagada");
+        }
+
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("G");
+            hablar.SpeakAsync($"Luz de fiesta apagada");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("F");
+            hablar.SpeakAsync($"Luz de fiesta encendida");
+        }
+
+        #region //VENTANA (ControlSERVO)
+        
+
+        private void grado0_Click(object sender, EventArgs e)
+        {
+                serialPort1.Write("D");
+                hablar.SpeakAsync("0 grados");
+        }
+
+        private void grado10_Click(object sender, EventArgs e)
+        {
+                serialPort1.Write("1");
+                hablar.SpeakAsync("10 grados");
+        }
+
+        private void grado20_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("2");
+            hablar.SpeakAsync("20 grados");
+        }
+
+        private void grado30_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("3");
+            hablar.SpeakAsync("30 grados");
+        }
+
+        private void grado40_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("4");
+            hablar.SpeakAsync("40 grados");
+        }
+
+        private void grado50_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("5");
+            hablar.SpeakAsync("50 grados");
+        }
+
+        private void grado60_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("6");
+            hablar.SpeakAsync("60 grados");
+        }
+        
+        private void grado70_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("7");
+            hablar.SpeakAsync("70 grados");
+        }
+        
+        private void grado80_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("8");
+            hablar.SpeakAsync("80 grados");
+        }
+
+        private void grado90_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("9");
+            hablar.SpeakAsync("90 grados");
+        }
+
+        private void grado100_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("T");
+            hablar.SpeakAsync("100 grados");
+        }
+
+        private void grado110_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("Y");
+            hablar.SpeakAsync("110 grados");
+        }
+
+        private void grado120_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("U");
+            hablar.SpeakAsync("120 grados");
+        }
+
+        private void grado130_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("I");
+            hablar.SpeakAsync("130 grados");
+        }
+
+        private void grado140_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("O");
+            hablar.SpeakAsync("140 grados");
+        }
+
+        private void grado150_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("P");
+            hablar.SpeakAsync("150 grados");
+        }
+
+        private void grado160_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("C");
+            hablar.SpeakAsync("160 grados");
+        }
+
+        private void grado170_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("V");
+            hablar.SpeakAsync("170 grados");
+        }
+
+        private void grado180_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("J");
+            hablar.SpeakAsync("180 grados");
+        }
+        #endregion//
+
+
+        private bool accesoPermitido = true;
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (accesoPermitido)
+            {
+                if (textBox2.Text == "ismael")
+                {
+                    MessageBox.Show("Acceso permitido, puerta abierta");
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña incorrecta");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Acceso denegado");
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sin acceso, puerta cerrada");
+            accesoPermitido = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
