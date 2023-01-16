@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Recognition; //Contiene tipos de tecnología de voz de escritorio de Windows para implementar el reconocimiento de voz.
@@ -21,7 +22,7 @@ namespace PROTOTIPO_3
         bool updateData = false;
 
         //RECONOCIMIENTO DE VOZ
-        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("es-ES"));
+        SpeechRecognitionEngine escucha = new SpeechRecognitionEngine(new CultureInfo(Cultura()));
 
         //GENERADOR DE VOZ
         SpeechSynthesizer hablar = new SpeechSynthesizer();
@@ -29,6 +30,13 @@ namespace PROTOTIPO_3
         public Form1()
         {
             InitializeComponent();
+        }
+        // Toma la cultura en uso del sistema y la retorna como texto
+        static string Cultura()
+        {
+            var cultura = CultureInfo.CurrentCulture;
+            string cultura_actual = Convert.ToString(cultura);
+            return cultura_actual;
         }
 
         //INICIALIZA EL RECONOCIMIENTO DE VOZ
