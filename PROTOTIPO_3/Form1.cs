@@ -51,7 +51,7 @@ namespace PROTOTIPO_3
             // Cambio ismael
         }
 
-                private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             escucha.RecognizeAsyncStop();
         }
@@ -62,178 +62,243 @@ namespace PROTOTIPO_3
             textBox1.Text = e.Result.Text; //MOSTRAR VOZ A TEXTO (TEXBOX)
 
             string nombre = "Mesa 9";
+            string[] HolaIA = { "hola 42", "42", "o la 42", "horas 42", "ola", "o la", "hola"};
+            string[] QuienEresIA = { "quién eres", "a quien eres?", "a quién eres" };
+            string[] TemperaturaIA = { "temperatura", "temperatura actual", "cuál es la temperatura", "cuales temperatura", "hace calor", "grados", "hace calor fuera", "calor" };
+            string[] HumedadIA = { "humedad", "humedad actual" };
+            string[] LuzIA = { "42 enciende la luz", "enciende la luz" };
+            string[] FiestaIA = { "42 enciende luz de fiesta", "luz de fiesta", "perenne la luzde fiesta" };
+            string[] BuenosDiasIA = { "buenos dias", "buenos días", "buenos vías" };
+            string[] EncenderLucesIA = { "42 enciende las luces", "enciende luces", "perenne las luces" };
+            string[] ApagarLucesIA = { "42 apagar la luz", "apagar la luz", "a pagar la luz", "apagar luces", "a pagar las luces", "42 apaga las luces", "apaga luces", "a pagar luces", "apagar las luces" };
+            string[] BuenasNochesIA = { "buenas noches", "descansa 42", "hasta mañana 42" };
+            string[] ApagarLucesFiestaIA = { "42 apaga la luz de fiesta", "apaga la luz de fiesta", "apaga la luz de fiestas" };
+            string[] EncenderRojoIA = { "42 enciende rojo", "enciende rojo", "prende rojo", "prende luz roja", "enciende luz roja" };
+            string[] EncenderVerdeIA = { "42 perenne ver", "42 perenne verte", "42 perenne verde", "perenne verde", "perenne ver", "perenne verte", "enciende verde", "enciende verte", "enciende ver" };
+            string[] EncenderAzulIA = { "42 enciende azul", "enciende azul", "perenne azul", "perenne luz azul", "enciende luz azul" };
+            string[] ApagarRojoIA = { "42 apagar rojo", "apagar rojo", "a pagar rojo" };
+            string[] ApagarVerdeIA = { "42 apagar verde", "apagar verde", "a pagar verde" };
+            string[] ApagarAzulIA = { "42 apagar azul", "apagar azul", "a pagar azul" };
 
-            /*FUNCIONES BASICAS DE LA IA 42 (Saludos,Preguntas y Respuestas)------------------*/
+            //FUNCIONES BASICAS DE LA IA 42 (Saludos,Preguntas y Respuestas)------------------
 
-            if (e.Result.Text == "hola 42" || e.Result.Text == "42" || e.Result.Text == "o la 42" || e.Result.Text == "horas 42" || e.Result.Text == "ola" || e.Result.Text == "o la" || e.Result.Text == "hola")
-                {   
-                hablar.SpeakAsync($"Hola {nombre} ¿Comó puedo ayudarte?");
+            foreach (string s in HolaIA)
+            { 
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Hola {nombre} ¿Comó puedo ayudarte?");
+                }
             }
 
-            if (e.Result.Text == "quién eres" || e.Result.Text == "a quien eres?" || e.Result.Text == "a quién eres")
+            foreach (string s in QuienEresIA)
             {
-                hablar.SpeakAsync($"Hola {nombre}, soy tu asistente virtual opiripiropi 42, ¿En que puedo ayudarte?");
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Hola {nombre}, soy tu asistente virtual opiripiropi 42, ¿En que puedo ayudarte?");
+                }
+            }
+            foreach (string s in BuenosDiasIA)
+            {
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Buenos dias {nombre}, Luces encedidas");
+                }
             }
 
-            /*TEMPERATURA ACTUAL-------------------------------*/
-
-            if (e.Result.Text == "temperatura" || e.Result.Text == "temperatura actual" || e.Result.Text == "cuál es la temperatura" || e.Result.Text == "cuales temperatura" || e.Result.Text == "hace calor" || e.Result.Text == "grados" || e.Result.Text == "hace calor fuera" || e.Result.Text == "calor")
+            //TEMPERATURA ACTUAL-------------------------------*/
+            foreach (string s in TemperaturaIA)
             {
-                hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
+                }
             }
             /*HUMEDAD ACTUAL-----------------------------------*/
 
-            if (e.Result.Text == "humedad" || e.Result.Text == "humedad actual")
+            foreach (string s in HumedadIA)
             {
-                hablar.SpeakAsync($"El porcentaje actual de humedad es de {humidity}");
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
+                }
             }
 
             /*ENCENDER LUCES ----------------------------------*/
 
             /*RELAY 1 LUZ NORMAL*/
-
-            if (e.Result.Text == "42 enciende la luz" || e.Result.Text == "enciende la luz")
+            foreach (string s in LuzIA)
             {
-                serialPort1.Write("7");
-                hablar.SpeakAsync($"Listo {nombre}, luz encendida");
-
-            }
-
-            if (e.Result.Text == "buenos dias" || e.Result.Text == "buenos días" || e.Result.Text == "buenos vías")
-            {
-                hablar.SpeakAsync($"Buenos dias {nombre}, Luces encedidas");
-
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("7");
+                    hablar.SpeakAsync($"Listo {nombre}, luz encendida");
+                }
             }
 
             /*RELAY 2 LUCES DE FIESTA*/
-
-            if (e.Result.Text == "42 enciende luz de fiesta" || e.Result.Text == "luz de fiesta" || e.Result.Text == "perenne la luzde fiesta")
+            foreach (string s in FiestaIA)
             {
-                hablar.SpeakAsync($"Listo {nombre}, luz de fiesta encendida");
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Listo {nombre}, luz de fiesta encendida");
+                }
             }
 
             /*RELAY 1 LUZ NORMAL y RELAY 2 LUCES DE FIESTA*/
-
-            if (e.Result.Text == "42 enciende las luces" || e.Result.Text == "enciende luces" || e.Result.Text == "perenne las luces")
+            foreach (string s in EncenderLucesIA)
             {
-                hablar.SpeakAsync($"Listo {nombre}, luces encendidas");
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Listo {nombre}, luces encendidas");
+                }
             }
 
             /*APAGAR LUCES ------------------------------------ */
 
             /*RELAY 1 LUZ NORMAL*/
-
-            if (e.Result.Text == "42 apagar la luz" || e.Result.Text == "apagar la luz" || e.Result.Text == "a pagar la luz" || e.Result.Text == "apagar luces" || e.Result.Text == "a pagar las luces")
+            foreach (string s in ApagarLucesIA)
             {
-                serialPort1.Write("8");
-                hablar.SpeakAsync($"Luz apagada {nombre}");
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("8");
+                    hablar.SpeakAsync($"Luz apagada {nombre}");
+                }
             }
-
-            if (e.Result.Text == "buenas noches" || e.Result.Text == "descansa 42" || e.Result.Text == "hasta mañana 42")
+            foreach (string s in BuenasNochesIA)
             {
-                hablar.SpeakAsync($"Luces apagadas, descansa {nombre}");
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Luces apagadas, descansa {nombre}");
+                }
             }
-
 
             /*RELAY 2 LUCES DE FIESTA*/
-
-            if (e.Result.Text == "42 apaga la luz de fiesta" || e.Result.Text == "apaga la luz de fiesta" || e.Result.Text == "apaga la luz de fiestas")
+            foreach (string s in ApagarLucesFiestaIA)
             {
-                hablar.SpeakAsync($"Luz de fiesta apagada {nombre}");
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Luz de fiesta apagada {nombre}");
+                }
             }
 
             /*RELAY 1 LUZ NORMAL y RELAY 2 LUCES DE FIESTA*/
 
-            if (e.Result.Text == "42 apaga las luces" || e.Result.Text == "apaga luces" || e.Result.Text == "a pagar luces" || e.Result.Text == "apagar las luces")
-                    {
-                hablar.SpeakAsync($"Luces apagas {nombre}");
-            }
-
             /*ENCENDER LEDS ----------------------------------*/
 
-            if (e.Result.Text == "42 enciende rojo" || e.Result.Text == "enciende rojo" || e.Result.Text == "prende rojo" || e.Result.Text == "prende luz roja" || e.Result.Text == "enciende luz roja")
+
+            foreach (string s in EncenderRojoIA)
             {
-                serialPort1.Write("1");
-                hablar.SpeakAsync($"Led rojo encendido {nombre}");
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("1");
+                    hablar.SpeakAsync($"Led rojo encendido {nombre}");
+                }
             }
 
-            if (e.Result.Text == "42 perenne ver" || e.Result.Text == "42 perenne verte" || e.Result.Text == "42 perenne verde" || e.Result.Text == "perenne verde" || e.Result.Text == "perenne ver" || e.Result.Text == "perenne verte" || e.Result.Text == "enciende verde" || e.Result.Text == "enciende verte" || e.Result.Text == "enciende ver")
+            foreach (string s in EncenderVerdeIA)
             {
-                serialPort1.Write("2");
-                hablar.SpeakAsync($"Led verde encendido {nombre}");
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("2");
+                    hablar.SpeakAsync($"Led verde encendido {nombre}");
+                }
             }
 
-            if (e.Result.Text == "42 enciende azul" || e.Result.Text == "enciende azul" || e.Result.Text == "perenne azul" || e.Result.Text == "perenne luz azul" || e.Result.Text == "enciende luz azul")
+            foreach (string s in EncenderAzulIA)
             {
-                serialPort1.Write("3");
-                hablar.SpeakAsync($"Led azul encendido {nombre}");
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("3");
+                    hablar.SpeakAsync($"Led azul encendido {nombre}");
+                }
             }
 
             /*APAGAR LEDS ----------------------------------*/
 
-            if (e.Result.Text == "42 apagar rojo" || e.Result.Text == "apagar rojo" || e.Result.Text == "a pagar rojo")
+            foreach (string s in ApagarRojoIA)
             {
-                serialPort1.Write("4");
-                hablar.SpeakAsync($"Led rojo apagado {nombre}");
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("4");
+                    hablar.SpeakAsync($"Led rojo apagado {nombre}");
+                }
             }
 
-            if (e.Result.Text == "42 apagar verde" || e.Result.Text == "apagar verde" || e.Result.Text == "a pagar verde")
+            foreach (string s in ApagarVerdeIA)
             {
-                serialPort1.Write("5");
-                hablar.SpeakAsync($"Led verde apagado {nombre}");
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("5");
+                    hablar.SpeakAsync($"Led verde apagado {nombre}");
+                }
             }
 
-            if (e.Result.Text == "42 apagar azul" || e.Result.Text == "apagar azul" || e.Result.Text == "a pagar azul")
+            foreach (string s in ApagarAzulIA)
             {
-                serialPort1.Write("6");
-                hablar.SpeakAsync($"Led azul apagado {nombre}");
+                if (e.Result.Text == s)
+                {
+                    serialPort1.Write("6");
+                    hablar.SpeakAsync($"Led azul apagado {nombre}");
+                }
             }
 
             /*PONE MUSICA ----------------------------------*/
 
-            if (e.Result.Text == "fiesta" || e.Result.Text == "baile" || e.Result.Text == "bailar" || e.Result.Text == "perenne el músico" || e.Result.Text == "enciende la fiestas" || e.Result.Text == "a fiesta")
+            string[] HoraFiestaIA = { "fiesta", "baile", "bailar", "perenne el músico", "enciende la fiestas", "a fiesta"};
+            string[] MusicaTranquilaIA = { "música tranquila", "música tranquila" };
+            string[] MusicaClasicaIA = { "música clásica", "clásicos", "música clásica" };
+            foreach (string s in HoraFiestaIA)
             {
-                hablar.SpeakAsync($"Hora de la fiesta {nombre}");
-                string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
-                System.Diagnostics.Process.Start(url);
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Hora de la fiesta {nombre}");
+                    string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
+                    System.Diagnostics.Process.Start(url);
+                }
+            }
+            foreach (string s in MusicaTranquilaIA)
+            {
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Escucha estas canciones mientras te relajas {nombre}");
+                    string url = "https://www.youtube.com/watch?v=3-4banibETY&list=PL6W2JmY9MGbV1ff53Vd0MHMpMM7aUHRnL&ab_channel=Meltt";
+                    System.Diagnostics.Process.Start(url);
+                }
+            }
+            foreach (string s in MusicaClasicaIA)
+            {
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"Haz escuchado estos temas {nombre}?");
+                    string url = "https://www.youtube.com/watch?v=fBJVaJyTMx8&list=PLTW24CNetpwQ-o_Fx5kKKOhGkoYhM0RAJ";
+                    System.Diagnostics.Process.Start(url);
+                }
             }
 
-            if (e.Result.Text == "música tranquila" || e.Result.Text == "música tranquila")
-            {
-                hablar.SpeakAsync($"Escucha estas canciones mientras te relajas {nombre}");
-                string url = "https://www.youtube.com/watch?v=3-4banibETY&list=PL6W2JmY9MGbV1ff53Vd0MHMpMM7aUHRnL&ab_channel=Meltt";
-                System.Diagnostics.Process.Start(url);
-            }
-            if (e.Result.Text == "música clásica" || e.Result.Text == "clásicos" || e.Result.Text == "música clásica")
-            {
-                hablar.SpeakAsync($"Haz escuchado estos temas {nombre}?");
-                string url = "https://www.youtube.com/watch?v=fBJVaJyTMx8&list=PLTW24CNetpwQ-o_Fx5kKKOhGkoYhM0RAJ";
-                System.Diagnostics.Process.Start(url);
-            }
-            
             /*CONTROL DE VENTANAS ----------------------------------*/
             /*ANGULO DE VENTANAS ----------------------------------*/
-
-            if (e.Result.Text == "ángulo de ventana" || e.Result.Text == "ángulo de ventana" || e.Result.Text == "Ajustar ventanas" || e.Result.Text == "ajustar de ventana")
+            string[] ControlVentanaIA = { "ángulo de ventana", "ángulo de ventana", "Ajustar ventanas", "ajustar de ventana" };
+            foreach (string s in ControlVentanaIA)
             {
-                hablar.SpeakAsync($"{nombre}, En que angulo desea ajustar las ventanas?");
-                SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine(); // Inicializar el reconocimiento de voz
-                RecognitionResult result = recognizer.Recognize(); // Capturar la entrada de voz del usuario
+                if (e.Result.Text == s)
+                {
+                    hablar.SpeakAsync($"{nombre}, En que angulo desea ajustar las ventanas?");
+                    SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine(); // Inicializar el reconocimiento de voz
+                    RecognitionResult result = recognizer.Recognize(); // Capturar la entrada de voz del usuario
 
-                string input = result.Text; // Convertir la entrada de voz a texto
+                    string input = result.Text; // Convertir la entrada de voz a texto
 
-                int Palabra;
-                int.TryParse(input, out Palabra);
+                    int Palabra;
+                    int.TryParse(input, out Palabra);
 
-                hablar.SpeakAsync($"{nombre} Las ventanas se colocaran en un angulo de {Palabra}");
+                    hablar.SpeakAsync($"{nombre} Las ventanas se colocaran en un angulo de {Palabra}");
+                }
             }
-
         }
-
 
         //CONTROL DE DISPOSITIVOS EN EN LA GUI (Botones...)
         private bool botonPresionado = true;
-
+        #region Boton Activar Led Rojo
         private void button5_Click(object sender, EventArgs e)
         {
             if (botonPresionado)
@@ -252,6 +317,8 @@ namespace PROTOTIPO_3
                 botonPresionado = true;
             }
         }
+        #endregion
+        #region Boton Activar Led Verde
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -271,7 +338,9 @@ namespace PROTOTIPO_3
                 botonPresionado = true;
             }
         }
+        #endregion
 
+        #region Boton Activar Led Azul
         private void button7_Click(object sender, EventArgs e)
         {
             if (botonPresionado)
@@ -290,7 +359,7 @@ namespace PROTOTIPO_3
                 botonPresionado = true;
             }
         }
-         
+        #endregion
         //
 
         private void Form1_Load(object sender, EventArgs e)
