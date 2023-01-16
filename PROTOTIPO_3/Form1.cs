@@ -31,6 +31,7 @@ namespace PROTOTIPO_3
         {
             InitializeComponent();
         }
+        // Esta variable es para poder controlar objetos del form1 desde el FormularioMenuPrincipal
         // Toma la cultura en uso del sistema y la retorna como texto
         static string Cultura()
         {
@@ -38,21 +39,31 @@ namespace PROTOTIPO_3
             string cultura_actual = Convert.ToString(cultura);
             return cultura_actual;
         }
+        //Variable que indica el estado actual del asistente
+        bool asistenteactivado = false;
 
         //INICIALIZA EL RECONOCIMIENTO DE VOZ
         private void button1_Click(object sender, EventArgs e)
         {
-            escucha.SetInputToDefaultAudioDevice();
-            escucha.LoadGrammar(new DictationGrammar());
-            escucha.SpeechRecognized += Deteccion;
-            escucha.RecognizeAsync(RecognizeMode.Multiple);
-            serialPort1.Write("Q"); //BUZZER (SONIDO)
-            hablar.SpeakAsync($"Reconocimiento de voz iniciado, Hola soy 42 ¿Comó puedo ayudarte?");
-            // Cambio ismael
+            if (asistenteactivado == false)
+            {
+                asistenteactivado = true;
+                escucha.SetInputToDefaultAudioDevice();
+                escucha.LoadGrammar(new DictationGrammar());
+                escucha.SpeechRecognized += Deteccion;
+                escucha.RecognizeAsync(RecognizeMode.Multiple);
+                //serialPort1.Write("Q"); //BUZZER (SONIDO)
+                hablar.SpeakAsync($"Reconocimiento de voz iniciado, Hola soy 42 ¿Comó puedo ayudarte?");
+            }
+            else
+            {
+                MessageBox.Show("El asistente de voz ya está habilitado", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            asistenteactivado = false;
             escucha.RecognizeAsyncStop();
         }
 
@@ -381,7 +392,6 @@ namespace PROTOTIPO_3
             }
         }
         #endregion
-        //
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -390,7 +400,7 @@ namespace PROTOTIPO_3
             //SE DEFINEN LAS 
             chart1.Series["TEMP"].Points.AddXY(1, 1);
             chart1.Series["HUM"].Points.AddXY(1, 1);
-
+          
         }
         //OBTIENE LOS PUERTOS DISPONIBLES DEL CUADRO COMBINADO Y POSTERIORMENTE LOS MUESTRA EN EL COMBOBOX
         private void comboBox_portList_DropDown(object sender, EventArgs e)
@@ -507,26 +517,6 @@ namespace PROTOTIPO_3
             {
                 updateData = false;
             }
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
