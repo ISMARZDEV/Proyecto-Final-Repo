@@ -44,7 +44,7 @@ namespace PROTOTIPO_3
                 escucha.LoadGrammar(new DictationGrammar());
                 escucha.SpeechRecognized += Deteccion;
                 escucha.RecognizeAsync(RecognizeMode.Multiple);
-                serialPort1.Write("Q"); //BUZZER (SONIDO)
+                //serialPort1.Write("Q"); //BUZZER (SONIDO)
                 hablar.SpeakAsync($"Reconocimiento de voz iniciado, Hola soy 42 ¿Comó puedo ayudarte?");
             }
             else
@@ -82,9 +82,9 @@ namespace PROTOTIPO_3
             string[] ApagarRojoIA = { "42 apagar rojo", "apagar rojo", "a pagar rojo" };
             string[] ApagarVerdeIA = { "42 apagar verde", "apagar verde", "a pagar verde" };
             string[] ApagarAzulIA = { "42 apagar azul", "apagar azul", "a pagar azul" };
-            string[] HoraFiestaIA = { "fiesta", "baile", "bailar", "perenne el músico", "enciende la fiestas", "a fiesta" };
-            string[] MusicaTranquilaIA = { "música tranquila", "música tranquila" };
-            string[] MusicaClasicaIA = { "música clásica", "clásicos", "música clásica" };
+            string[] HoraFiestaIA = { "fiesta", "baile", "bailar", "perenne el músico", "enciende la fiestas", "a fiesta" , "party" , "pary music"};
+            string[] MusicaTranquilaIA = { "música tranquila", "música tranquila", "relax" , "relaxing music"};
+            string[] MusicaClasicaIA = { "música clásica", "clásicos", "música clásica" , "classic" , "clasic music"};
             string[] ControlVentanaIA = { "ángulo de ventana", "ángulo de ventana", "Ajustar ventanas", "ajustar de ventana" };
             //FUNCIONES BASICAS DE LA IA 42 (Saludos,Preguntas y Respuestas)------------------
 
