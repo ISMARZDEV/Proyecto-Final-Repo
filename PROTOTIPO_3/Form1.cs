@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Globalization;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Recognition; //Contiene tipos de tecnología de voz de escritorio de Windows para implementar el reconocimiento de voz.
 using System.Speech.Synthesis; //Contiene clases para inicializar y configurar un motor de síntesis de voz para generar voz.
@@ -31,7 +24,6 @@ namespace PROTOTIPO_3
         {
             InitializeComponent();
         }
-        // Esta variable es para poder controlar objetos del form1 desde el FormularioMenuPrincipal
         // Toma la cultura en uso del sistema y la retorna como texto
         static string Cultura()
         {
@@ -52,7 +44,7 @@ namespace PROTOTIPO_3
                 escucha.LoadGrammar(new DictationGrammar());
                 escucha.SpeechRecognized += Deteccion;
                 escucha.RecognizeAsync(RecognizeMode.Multiple);
-                //serialPort1.Write("Q"); //BUZZER (SONIDO)
+                serialPort1.Write("Q"); //BUZZER (SONIDO)
                 hablar.SpeakAsync($"Reconocimiento de voz iniciado, Hola soy 42 ¿Comó puedo ayudarte?");
             }
             else
