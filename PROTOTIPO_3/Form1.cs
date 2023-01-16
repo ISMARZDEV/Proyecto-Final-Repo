@@ -79,7 +79,10 @@ namespace PROTOTIPO_3
             string[] ApagarRojoIA = { "42 apagar rojo", "apagar rojo", "a pagar rojo" };
             string[] ApagarVerdeIA = { "42 apagar verde", "apagar verde", "a pagar verde" };
             string[] ApagarAzulIA = { "42 apagar azul", "apagar azul", "a pagar azul" };
-
+            string[] HoraFiestaIA = { "fiesta", "baile", "bailar", "perenne el músico", "enciende la fiestas", "a fiesta" };
+            string[] MusicaTranquilaIA = { "música tranquila", "música tranquila" };
+            string[] MusicaClasicaIA = { "música clásica", "clásicos", "música clásica" };
+            string[] ControlVentanaIA = { "ángulo de ventana", "ángulo de ventana", "Ajustar ventanas", "ajustar de ventana" };
             //FUNCIONES BASICAS DE LA IA 42 (Saludos,Preguntas y Respuestas)------------------
 
             foreach (string s in HolaIA)
@@ -87,6 +90,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"Hola {nombre} ¿Comó puedo ayudarte?");
+                    break;
                 }
             }
 
@@ -95,6 +99,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"Hola {nombre}, soy tu asistente virtual opiripiropi 42, ¿En que puedo ayudarte?");
+                    break;
                 }
             }
             foreach (string s in BuenosDiasIA)
@@ -102,6 +107,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"Buenos dias {nombre}, Luces encedidas");
+                    break;
                 }
             }
 
@@ -111,6 +117,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
+                    break;
                 }
             }
             /*HUMEDAD ACTUAL-----------------------------------*/
@@ -120,6 +127,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"La temperatura actual es de {temperature} grados centigrados");
+                    break;
                 }
             }
 
@@ -132,6 +140,7 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("7");
                     hablar.SpeakAsync($"Listo {nombre}, luz encendida");
+                    break;
                 }
             }
 
@@ -141,6 +150,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"Listo {nombre}, luz de fiesta encendida");
+                    break;
                 }
             }
 
@@ -150,6 +160,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"Listo {nombre}, luces encendidas");
+                    break;
                 }
             }
 
@@ -162,6 +173,7 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("8");
                     hablar.SpeakAsync($"Luz apagada {nombre}");
+                    break;
                 }
             }
             foreach (string s in BuenasNochesIA)
@@ -169,6 +181,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"Luces apagadas, descansa {nombre}");
+                    break;
                 }
             }
 
@@ -178,6 +191,7 @@ namespace PROTOTIPO_3
                 if (e.Result.Text == s)
                 {
                     hablar.SpeakAsync($"Luz de fiesta apagada {nombre}");
+                    break;
                 }
             }
 
@@ -192,6 +206,7 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("1");
                     hablar.SpeakAsync($"Led rojo encendido {nombre}");
+                    break;
                 }
             }
 
@@ -201,6 +216,7 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("2");
                     hablar.SpeakAsync($"Led verde encendido {nombre}");
+                    break;
                 }
             }
 
@@ -210,6 +226,7 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("3");
                     hablar.SpeakAsync($"Led azul encendido {nombre}");
+                    break;
                 }
             }
 
@@ -221,6 +238,7 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("4");
                     hablar.SpeakAsync($"Led rojo apagado {nombre}");
+                    break;
                 }
             }
 
@@ -230,6 +248,7 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("5");
                     hablar.SpeakAsync($"Led verde apagado {nombre}");
+                    break;
                 }
             }
 
@@ -239,14 +258,13 @@ namespace PROTOTIPO_3
                 {
                     serialPort1.Write("6");
                     hablar.SpeakAsync($"Led azul apagado {nombre}");
+                    break;
                 }
             }
 
             /*PONE MUSICA ----------------------------------*/
 
-            string[] HoraFiestaIA = { "fiesta", "baile", "bailar", "perenne el músico", "enciende la fiestas", "a fiesta"};
-            string[] MusicaTranquilaIA = { "música tranquila", "música tranquila" };
-            string[] MusicaClasicaIA = { "música clásica", "clásicos", "música clásica" };
+
             foreach (string s in HoraFiestaIA)
             {
                 if (e.Result.Text == s)
@@ -254,6 +272,7 @@ namespace PROTOTIPO_3
                     hablar.SpeakAsync($"Hora de la fiesta {nombre}");
                     string url = "https://www.youtube.com/watch?v=KJ5zaSPjC6w&ab_channel=DjDashPeru";
                     System.Diagnostics.Process.Start(url);
+                    break;
                 }
             }
             foreach (string s in MusicaTranquilaIA)
@@ -263,6 +282,7 @@ namespace PROTOTIPO_3
                     hablar.SpeakAsync($"Escucha estas canciones mientras te relajas {nombre}");
                     string url = "https://www.youtube.com/watch?v=3-4banibETY&list=PL6W2JmY9MGbV1ff53Vd0MHMpMM7aUHRnL&ab_channel=Meltt";
                     System.Diagnostics.Process.Start(url);
+                    break;
                 }
             }
             foreach (string s in MusicaClasicaIA)
@@ -272,12 +292,12 @@ namespace PROTOTIPO_3
                     hablar.SpeakAsync($"Haz escuchado estos temas {nombre}?");
                     string url = "https://www.youtube.com/watch?v=fBJVaJyTMx8&list=PLTW24CNetpwQ-o_Fx5kKKOhGkoYhM0RAJ";
                     System.Diagnostics.Process.Start(url);
+                    break;
                 }
             }
 
             /*CONTROL DE VENTANAS ----------------------------------*/
             /*ANGULO DE VENTANAS ----------------------------------*/
-            string[] ControlVentanaIA = { "ángulo de ventana", "ángulo de ventana", "Ajustar ventanas", "ajustar de ventana" };
             foreach (string s in ControlVentanaIA)
             {
                 if (e.Result.Text == s)
@@ -292,6 +312,7 @@ namespace PROTOTIPO_3
                     int.TryParse(input, out Palabra);
 
                     hablar.SpeakAsync($"{nombre} Las ventanas se colocaran en un angulo de {Palabra}");
+                    break;
                 }
             }
         }
