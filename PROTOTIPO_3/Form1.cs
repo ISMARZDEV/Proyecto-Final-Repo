@@ -402,6 +402,7 @@ namespace PROTOTIPO_3
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
             string[] portLists = SerialPort.GetPortNames();
+
             comboBox1.Items.Clear();
             comboBox1.Items.AddRange(portLists);
         }

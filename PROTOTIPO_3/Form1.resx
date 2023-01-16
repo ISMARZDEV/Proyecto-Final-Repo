@@ -2147,6 +2147,18 @@
   <data name="comboBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="comboBox2.Items" xml:space="preserve">
+    <value>9600</value>
+  </data>
+  <data name="comboBox2.Items1" xml:space="preserve">
+    <value>38400</value>
+  </data>
+  <data name="comboBox2.Items2" xml:space="preserve">
+    <value>57600</value>
+  </data>
+  <data name="comboBox2.Items3" xml:space="preserve">
+    <value>115200</value>
+  </data>
   <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>177, 57</value>
   </data>

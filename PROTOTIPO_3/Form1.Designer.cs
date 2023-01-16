@@ -772,6 +772,11 @@
             // 
             resources.ApplyResources(this.comboBox2, "comboBox2");
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            resources.GetString("comboBox2.Items"),
+            resources.GetString("comboBox2.Items1"),
+            resources.GetString("comboBox2.Items2"),
+            resources.GetString("comboBox2.Items3")});
             this.comboBox2.Name = "comboBox2";
             // 
             // comboBox1
@@ -779,6 +784,9 @@
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Name = "comboBox1";
+            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_DropDown);
             // 
             // Form1
             // 
